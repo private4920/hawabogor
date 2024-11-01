@@ -12,3 +12,10 @@ The air quality monitoring system I developed uses an Arduino board connected to
 ## Technical Documentation
 ### Project Pictorial Diagram
 ![Project Pictorial Diagram](/images-doc/pictorial.jpeg)
+#### Components Used
+- Arduino UNO
+- Winsen Sensor ZH03A, as particulate matter sensor
+- RTC for timekeeping and to ensure only one data is sent every 15 minutes
+- NodeMCU as WiFi module
+- DHT22/DHT11 as temperature and humidity sensor
+- Breadboard
