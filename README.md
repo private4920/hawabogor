@@ -8,3 +8,6 @@ Our platform also features a public website where users can access live AQI read
 
 ## How does It Works
 The air quality monitoring system I developed uses an Arduino board connected to a Winsen ZH03A sensor for particulate matter and a DHT22 sensor for temperature and humidity. The system periodically collects data and sends it to a NodeMCU microcontroller with built-in Wi-Fi. The NodeMCU then transmits this data to our server, which processes it according to the EPA air quality index formula and displays the results on our website.
+
+## Technical Documentation
+### Project Pictorial Diagram
