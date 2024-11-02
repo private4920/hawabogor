@@ -1,0 +1,212 @@
+<DOCTYPE html>
+<html lang="en" class="govuk-template app-html-class">
+
+<head>
+  <meta charset="utf-8">
+  <title>HawaBogor - Air Quality Index</title>
+<meta name="description" content="Sistem pemantauan kualitas udara Kota Bogor. Ketahui kualitas udara terkini sekarang juga dan dapatkan saran untuk meminimalisir dampak polusi.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="blue">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="blue">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+  <link href="govuk-frontend-4.7.0.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+   crossorigin=""></script>
+   <meta name="google-site-verification" content="kNkf6o8R_FQTwL-IGZCFZwcfAy2NKPRdQHwOwXbtSXY" />
+   <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HH683K2QE7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HH683K2QE7');
+</script>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "c3658492-3a59-4300-8e2c-d05096240f8e",
+    });
+  });
+</script>
+</head>
+<style>
+ #map {
+            width: 100%;
+            height: 400px;
+        }
+    .container {
+  width: 100%;
+  display: flex;
+  font-family: Arial;
+}
+.largebox{
+  width: 100%;
+  display: box;
+  
+  font-family: Arial;
+}
+.paddingleft{
+  
+}
+.insidebox {
+  width: 33.3333%;
+  float: left;
+  height: inherit !important;
+}
+
+.titlebox{
+  text-align: center;
+  font-size: 25px;
+}
+.titlebox-large{
+  text-align: center;
+  font-size: 40px;
+}
+.parametervalue-large{
+  text-align: center;
+  font-size: 75px;
+}
+.parametervalue{
+  text-align: center;
+  font-size: 35px;
+}
+.parameterunit{
+  text-align: center;
+  font-size: 20px;
+}
+.aqi-description{
+  text-align: center;
+  font-size: 25px;
+}
+</style>
+<body class="govuk-template__body app-body-class" data-test="My value" data-other="report:details">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container app-width-container">
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype" style="float: left !important;">
+            <img src="/assets/images/bogoraqi-logo.svg" height="100px" style="float: left;"/>
+            <span class="govuk-header__logotype-text" style="padding-left:20px !important; padding-right: 20px !important;">
+              HawaBogor
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-header__content">
+        <a href="#" class="govuk-header__link govuk-header__service-name" style="padding-left: 20px !important; padding-right: 20px !important;">
+          Sistem Pemantauan Kualitas Udara Kota Bogor
+        </a>
+      </div>
+    </div>
+  </header>
+  <div class="govuk-width-container app-width-container">
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+        </strong>
+        <span class="govuk-phase-banner__text">
+          Ini adalah layanan baru — beberapa fungsi mungkin belum maksimal 
+        </span>
+      </p>
+    </div>
+    
+    
+    <main class="govuk-main-wrapper app-main-class" id="main-content" role="main">
+   
+      <h1 class="govuk-heading-xl">Pilih Lokasi</h1>
+      <span class="govuk-caption-l">Klik pada marker peta untuk memilih lokasi sensor</span>
+    </main>
+  </div>
+<div id="map" height="80px" width="80px"></div>
+
+  <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="#">
+                About
+              </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="mailto:team@bogoraqi.my.id?cc=0065015415@students.reginapacis.sch.id,0075827146@students.reginapacis.sch.id">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+         
+          <span class="govuk-footer__licence-description">
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://creativecommons.org/licenses/by/4.0/"
+              rel="license">Creative Commons Attribution 4.0 International</a>, except where otherwise stated
+          </span>
+        </div>
+        <div class="govuk-footer__meta-item">
+          <span
+            class="govuk-footer__copyright-logo">© 2023 Gabriel Seto Pribadi, Yosef Emanuel Adhi Hutomo</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="govuk-frontend-4.7.0.min.js"></script>
+</body>
+<script>
+
+var map_init = L.map('map',{
+    center: [-6.6036792, 106.7972267],
+    zoom: 13
+});
+
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map_init);
+
+var marker = L.marker([-6.5924655, 106.7966171]).addTo(map_init);
+var marker2 = L.marker([-6.6259242, 106.8087545]).addTo(map_init);
+
+var Basemaps = {
+    "OSM": osm
+};
+
+var Overlaymaps = {
+    "Marker": marker,
+    "Marker2": marker2
+};
+
+L.control.layers(Basemaps, Overlaymaps).addTo(map_init);
+
+marker.on('click', clicksch);
+marker2.on('click', clickhome);
+
+function clicksch(){
+    window.location.href = "https://hawabogor.my.id/smarp.php";
+}
+
+function clickhome(){
+    // Define the behavior for marker2 click
+    window.location.href = "https://hawabogor.my.id/home.php"
+}
+
+</script>
+</html>

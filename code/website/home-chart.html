@@ -1,0 +1,221 @@
+<DOCTYPE html>
+<html lang="en" class="govuk-template app-html-class">
+
+<head>
+  <meta charset="utf-8">
+  <title>Grafik Historis - Kec. Bogor Selatan - BogorAQI - Air Quality Index</title>
+<meta name="description" content="Sistem pemantauan kualitas udara Kota Bogor. Ketahui kualitas udara terkini sekarang juga dan dapatkan saran untuk meminimalisir dampak polusi.">
+<meta name="robots" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="blue">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="shortcut icon" sizes="16x16 32x32 48x48" href="/assets/images/favicon.ico" type="image/x-icon">
+  <link rel="mask-icon" href="/assets/images/govuk-mask-icon.svg" color="blue">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/govuk-apple-touch-icon-180x180.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/assets/images/govuk-apple-touch-icon-167x167.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/govuk-apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" href="/assets/images/govuk-apple-touch-icon.png">
+  <link href="govuk-frontend-4.7.0.min.css" rel="stylesheet">
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HH683K2QE7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HH683K2QE7');
+</script>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(function(OneSignal) {
+    OneSignal.init({
+      appId: "c3658492-3a59-4300-8e2c-d05096240f8e",
+    });
+  });
+</script>
+</head>
+<style>
+    .container {
+  width: 100%;
+  display: flex;
+  font-family: Arial;
+}
+.largebox{
+  width: 100%;
+  display: box;
+  
+  font-family: Arial;
+}
+.paddingleft{
+  
+}
+.insidebox {
+  width: 33.3333%;
+  float: left;
+  height: inherit !important;
+}
+
+.titlebox{
+  text-align: center;
+  font-size: 25px;
+}
+.titlebox-large{
+  text-align: center;
+  font-size: 40px;
+}
+.parametervalue-large{
+  text-align: center;
+  font-size: 75px;
+}
+.parametervalue{
+  text-align: center;
+  font-size: 35px;
+}
+.parameterunit{
+  text-align: center;
+  font-size: 20px;
+}
+.aqi-description{
+  text-align: center;
+  font-size: 25px;
+}
+</style>
+<body class="govuk-template__body app-body-class" data-test="My value" data-other="report:details">
+  <script>
+    document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
+  </script>
+  
+  <a href="#main-content" class="govuk-skip-link" data-module="govuk-skip-link">Skip to main content</a>
+  <header class="govuk-header " role="banner" data-module="govuk-header">
+    <div class="govuk-header__container app-width-container">
+      <div class="govuk-header__logo">
+        <a href="#" class="govuk-header__link govuk-header__link--homepage">
+          <span class="govuk-header__logotype" style="float: left !important;">
+            <img src="/assets/images/bogoraqi-logo.svg" height="100px" style="float: left;"/>
+            <span class="govuk-header__logotype-text" style="padding-left:20px !important; padding-right: 20px !important;">
+              HawaBogor
+            </span>
+          </span>
+        </a>
+      </div>
+      <div class="govuk-header__content">
+        <a href="#" class="govuk-header__link govuk-header__service-name" style="padding-left: 20px !important; padding-right: 20px !important;">
+          Lokasi: Batutulis, Bogor Selatan
+        </a>
+        <nav aria-label="Menu" class="govuk-header__navigation " style="padding-left: 20px !important; padding-right: 20px !important;">
+          <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>
+          <ul id="navigation" class="govuk-header__navigation-list">
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://hawabogor.my.id">
+                Ganti Lokasi Sensor
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://hawabogor.my.id/home.php">
+                NowCast
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item">
+              <a class="govuk-header__link" href="https://hawabogor.my.id/home-24h.php">
+                Rata-rata 24 Jam
+              </a>
+            </li>
+            <li class="govuk-header__navigation-item govuk-header__navigation-item--active">
+              <a class="govuk-header__link" href="#">
+                Grafik Histori
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <div class="govuk-width-container app-width-container">
+    <div class="govuk-phase-banner">
+      <p class="govuk-phase-banner__content">
+        <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+        </strong>
+        <span class="govuk-phase-banner__text">
+          Ini adalah layanan baru — beberapa fungsi mungkin belum maksimal 
+        </span>
+      </p>
+    </div>
+    <a onclick="history.back()" class="govuk-back-link">Back</a>
+
+      <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <form action="home-chart.php" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Silahkan memilih grafik
+                </h1>
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="selectchart" name="where-do-you-live" type="radio" value="aqi">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                    AQI dan AQI NowCast
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="polutan">
+                  <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                    Polutan (PM1, PM2.1, dan PM10)
+                  </label>
+                </div>
+                
+              </div>
+            </fieldset>
+          </div>
+          <button class="govuk-button" data-module="govuk-button">
+            Continue
+          </button>
+        </form>
+      </div>
+    </div>
+  </main>
+  </div>
+  
+  <footer class="govuk-footer " role="contentinfo">
+    <div class="govuk-width-container ">
+      <div class="govuk-footer__meta">
+        <div class="govuk-footer__meta-item govuk-footer__meta-item--grow">
+          <h2 class="govuk-visually-hidden">Support links</h2>
+          <ul class="govuk-footer__inline-list">
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="#">
+                About
+              </a>
+            </li>
+            <li class="govuk-footer__inline-list-item">
+              <a class="govuk-footer__link" href="mailto:team@bogoraqi.my.id?cc=0065015415@students.reginapacis.sch.id,0075827146@students.reginapacis.sch.id">
+                Contact
+              </a>
+            </li>
+
+          </ul>
+         
+          <span class="govuk-footer__licence-description">
+            All content is available under the
+            <a
+              class="govuk-footer__link"
+              href="https://creativecommons.org/licenses/by/4.0/"
+              rel="license">Creative Commons Attribution 4.0 International</a>, except where otherwise stated
+          </span>
+        </div>
+        <div class="govuk-footer__meta-item">
+          <span
+            class="govuk-footer__copyright-logo">© 2023 Gabriel Seto Pribadi, Yosef Emanuel Adhi Hutomo</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="govuk-frontend-4.7.0.min.js"></script>
+</body>
+
+</html>
