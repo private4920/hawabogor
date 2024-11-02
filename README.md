@@ -1,6 +1,8 @@
 # mit-maker
 Hi There! Welcme to my Maker Portfolio GitHub Repository
 
+## Name Clarification
+On some files you may see the term "bogoraqi", that is the former name of my project before it was changed to "HawaBogor"
 ## About My Project
 I collaborated with my friend on developing an air quality monitoring system to provide real-time data in response to growing environmental concerns within my community. By utilizing an Arduino UNO for sensor data collection and a NodeMCU with WiFi capabilities, we created a system that seamlessly transmits air quality information to a server. Following the guidelines set by the US EPA, we processed this data to calculate an Air Quality Index (AQI) score, reflecting current environmental conditions.
 
