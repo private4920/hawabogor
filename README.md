@@ -21,3 +21,22 @@ The air quality monitoring system I developed uses an Arduino board connected to
 - NodeMCU as WiFi module
 - DHT22/DHT11 as temperature and humidity sensor
 - Breadboard
+
+
+  
+## Libraries Used
+### For ESP8266 (NodeMCU)
+ESP8266WiFi.h from https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266WiFi
+
+ESP8266HTTPClient.h from https://github.com/esp8266/Arduino/tree/master/libraries/ESP8266HTTPClient
+
+### For Serial Communication
+SoftwareSerial.h https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/SoftwareSerial
+
+### For DHT Temperature and Humidity Sensor
+DHT.h from https://github.com/adafruit/DHT-sensor-library
+
+### For RTC Clock
+RTClib.h from https://github.com/adafruit/RTClib
+
+Wire.h from https://github.com/arduino/ArduinoCore-avr/tree/master/libraries/Wire
