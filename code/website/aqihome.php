@@ -11,7 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $apikey = $_POST["apikey"];
     
 }
-if($apikey != "REDACTED"){
+if($apikey != "ATCU83JHSUICH6"){
     die("API error");
 }
 if($pm25now == 0){

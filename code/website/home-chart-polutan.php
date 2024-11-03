@@ -204,7 +204,7 @@ $output = <<<EOT
 
 <head>
   <meta charset="utf-8">
-  <title>Grafik Polutan - Kec. Bogor Selatan - BogorAQI - Air Quality Index</title>
+  <title>Grafik Polutan - Kec. Tanah Sareal - HawaBogor - Air Quality Index</title>
 <meta name="description" content="Sistem pemantauan kualitas udara Kota Bogor. Ketahui kualitas udara terkini sekarang juga dan dapatkan saran untuk meminimalisir dampak polusi.">
 <meta name="robots" content="noindex">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -304,7 +304,7 @@ $output = <<<EOT
       </div>
       <div class="govuk-header__content">
         <a href="#" class="govuk-header__link govuk-header__service-name" style="padding-left: 20px !important; padding-right: 20px !important;">
-          Lokasi: Batutulis, Bogor Selatan
+          Lokasi: Kec. Tanah Sareal, Kota Bogor
         </a>
         <nav aria-label="Menu" class="govuk-header__navigation " style="padding-left: 20px !important; padding-right: 20px !important;">
           <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>

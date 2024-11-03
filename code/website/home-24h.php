@@ -211,7 +211,7 @@ $output = <<<EOT
       </div>
       <div class="govuk-header__content">
         <a href="#" class="govuk-header__link govuk-header__service-name" style="padding-left: 20px !important; padding-right: 20px !important;">
-          Lokasi: Batutulis, Bogor Selatan
+          Lokasi: Kec. Tanah Sareal, Kota Bogor
         </a>
         <nav aria-label="Menu" class="govuk-header__navigation " style="padding-left: 20px !important; padding-right: 20px !important;">
           <button type="button" class="govuk-header__menu-button govuk-js-header-toggle" aria-controls="navigation" aria-label="Show or hide menu" hidden>Menu</button>

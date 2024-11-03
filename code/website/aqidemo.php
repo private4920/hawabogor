@@ -11,9 +11,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 }
-if($apikey != "REDACTED"){
-    die("API error");
-}
 /*if($pm25now = 20){
     die("Error Sensor");
 }*/

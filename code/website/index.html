@@ -174,7 +174,7 @@
 <script>
 
 var map_init = L.map('map',{
-    center: [-6.6036792, 106.7972267],
+    center: [-6.5713817, 106.7956334],
     zoom: 13
 });
 
@@ -182,21 +182,21 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map_init);
 
-var marker = L.marker([-6.5924655, 106.7966171]).addTo(map_init);
-var marker2 = L.marker([-6.6259242, 106.8087545]).addTo(map_init);
+ //var marker = L.marker([-6.5924655, 106.7966171]).addTo(map_init);
+var marker2 = L.marker([-6.5637723, 106.7890322]).addTo(map_init);
 
 var Basemaps = {
     "OSM": osm
 };
 
 var Overlaymaps = {
-    "Marker": marker,
+    
     "Marker2": marker2
 };
 
 L.control.layers(Basemaps, Overlaymaps).addTo(map_init);
 
-marker.on('click', clicksch);
+//marker.on('click', clicksch);
 marker2.on('click', clickhome);
 
 function clicksch(){
