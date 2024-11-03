@@ -75,7 +75,7 @@ DateTime now = rtc.now(); // Get the current date and time
   // Check if the current time is at 00, 15, 30, or 45 minutes
   if (currentMinutes == 0 || currentMinutes == 15 ||
       currentMinutes == 30 || currentMinutes == 45) {
-    // Perform your specific actions here
+    // Combine data then send it to NodeMCU
 	  String string1 = getAQI();
   String string2 = getTempHumid();
   String string3 = string1 + string2;
@@ -84,5 +84,5 @@ DateTime now = rtc.now(); // Get the current date and time
 
   }
 
-  delay(60000); // Delay for 1 second before checking again
+  delay(60000); // Delay for 1 minute before checking again
 }
