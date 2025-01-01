@@ -1,5 +1,5 @@
-# mit-maker
-Hi There! Welcme to my Maker Portfolio GitHub Repository: HawaBogor, Air Quality Monitoring System for Bogor City
+# HawaBogor
+Hi There! Welcme to my Air Quality Project GitHub Repository: HawaBogor, Air Quality Monitoring System for Bogor City
 
 ## Name Clarification
 On some files you may see the term "bogoraqi", that is the former name of my project before it was changed to "HawaBogor"
